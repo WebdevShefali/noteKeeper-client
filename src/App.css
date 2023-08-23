@@ -4,54 +4,71 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
-.navbar{
+.navbar,
+.slashPin,
+.pagination .page-link:hover,
+.card-title,
+.confirmation-modal {
   background-color: #000;
 }
-.navbar-brand{
-display: block;
-margin: auto;
+.navbar-brand,
+.alert {
+  display: block;
+}
+.navbar-brand {
+  margin: auto;
   color: #fff !important;
 }
-.notes{
+.notes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.notes-container,.addnote{
+.notes-container,
+.addnote,
+.search {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.search{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.addnote{
+.addnote {
   flex-direction: column;
 }
-.slashPin{
-background-color: #000;
-color: #fff;
-border-radius: 6px;
+.slashPin,
+.pagination .page-link:hover,
+.card-title,
+.confirmation-modal {
+  color: #fff;
 }
-i{
+.slashPin {
+  border-radius: 6px;
+}
+i {
   padding: 10px;
 }
-.card-buttons{
+.card-buttons,
+.card-title,
+.confirmation-modal {
   position: absolute;
+}
+.card-buttons {
   bottom: 0;
   right: 0;
 }
 
-i:focus,i:active,input,input:focus,input:active,.page-link:active,.page-link:focus{
+i:focus,
+i:active,
+input,
+input:focus,
+input:active,
+.page-link:active,
+.page-link:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-/* Pagination styling */
 .pagination {
   margin-top: 20px;
 }
@@ -59,23 +76,20 @@ i:focus,i:active,input,input:focus,input:active,.page-link:active,.page-link:foc
   display: inline;
   margin: 0 5px;
 }
+.pagination .page-link,
+.confirmation-modal,
+.alert {
+  border: 1px solid #000;
+}
 .pagination .page-link {
   cursor: pointer;
-  border: 1px solid #000;
   background-color: transparent;
   color: #000;
 }
-.pagination .page-link:hover {
-  background-color: #000;
-  color: #fff;
-}
 .first-item {
- order: -1;
+  order: -1;
 }
-.card-title{
-  background-color: #000;
-  color: #fff;
-  position: absolute;
+.card-title {
   top: 0;
   left: 0;
   width: 100%;
@@ -99,50 +113,49 @@ i:focus,i:active,input,input:focus,input:active,.page-link:active,.page-link:foc
   border: 0;
   padding: 0.7rem 0.7rem 0.7rem 0;
 }
-.confirmation-modal{
-  position: absolute;
+.confirmation-modal {
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 9999;
-  border: 1px solid #000;
   border-radius: 10px;
   height: 20vh;
-  background-color: #000;
-  color: #fff;
   width: 30vw;
   padding: 20px;
 }
-.alert{
- display: block;
- margin: 0 auto;
+.alert {
+  margin: 0 auto;
   width: 50%;
-  border: 1px solid #000;
   border-radius: 10px;
   position: relative;
   z-index: 999;
 }
-.card{
+.card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-@media only screen and (max-width:768px) {
-  html,body{
+.edit-modal{
+  margin-top: 8rem;
+}
+@media only screen and (max-width: 768px) {
+  html,
+  body {
     width: 100% !important;
     overflow-x: hidden !important;
   }
-  .notes{
-    grid-template-columns: repeat(2, 1fr); 
+  .notes {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (max-width:425px) {
-  .notes{
-    grid-template-columns: repeat(1, 1fr); 
+@media only screen and (max-width: 425px) {
+  .notes {
+    grid-template-columns: repeat(1, 1fr);
   }
-  .addnote input,.addnote textarea{
+  .addnote input,
+  .addnote textarea {
     width: 320px !important;
   }
 }

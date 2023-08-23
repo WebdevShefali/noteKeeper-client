@@ -78,7 +78,7 @@ const AddNote = (props) => {
           value={note.noteBody}
           onChange={handleChange}
           style={{
-            height: "50px",
+            height: "150px",
             width: "500px",
             borderRadius: "5px",
             outline: "none",

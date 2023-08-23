@@ -90,7 +90,7 @@ const Notes = (props) => {
         Launch demo modal
       </button>
       <div
-        className="modal fade"
+        className="edit-modal modal fade"
         id="exampleModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -101,7 +101,7 @@ const Notes = (props) => {
             className="modal-content"
             style={{ backgroundColor: "#000", color: "#fff" }}
           >
-            <div className="modal-header">
+            <div className="modal-header" style={{borderBottom:"none"}}>
               <h5 className="modal-title" id="exampleModalLabel">
                 Edit note
               </h5>
@@ -155,7 +155,7 @@ const Notes = (props) => {
                   onChange={handleChange}
                   required
                   style={{
-                    height: "50px",
+                    height: "150px",
                     width: "100%",
                     borderRadius: "10px",
                     outline: "none",
@@ -165,7 +165,7 @@ const Notes = (props) => {
                 />
               </div>
             </div>
-            <div className="modal-footer">
+            <div className="modal-footer" style={{borderTop:"none"}}>
               <button
                 type="button"
                 disabled={note.title.length < 3 || note.tag.length < 3}
