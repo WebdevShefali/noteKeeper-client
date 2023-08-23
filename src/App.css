@@ -159,7 +159,7 @@ input:active,
     width: 320px !important;
   }
 .confirmation-modal {
-  height: 50vh;
+  height: 30vh;
   width: 90%;
 }
 .search{
