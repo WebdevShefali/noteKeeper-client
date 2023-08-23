@@ -192,7 +192,7 @@ const Notes = (props) => {
       </div>
       <div>
         <div className="search my-5">
-          <div className="searchContainer">
+          <div className="searchContainer my-1">
             <i className="fa fa-search searchIcon"></i>
             <input
               className="searchBox"
@@ -207,7 +207,7 @@ const Notes = (props) => {
        
           <Link to="addnote" >
               <button
-                className="btn mx-5"
+                className="btn mx-5 my-1"
                 type="submit"
                 style={{
                   backgroundColor:"#000",
