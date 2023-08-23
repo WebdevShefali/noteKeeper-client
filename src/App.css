@@ -160,7 +160,7 @@ input:active,
   }
 .confirmation-modal {
   height: 50vh;
-  width: 50vw;
+  width: 90%;
 }
 .search{
 flex-direction:column;
