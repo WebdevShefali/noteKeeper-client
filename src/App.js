@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import NoteState from "./context/NoteState";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Alert from "./components/Alert";
+import { useState } from "react";
+import AddNote from "./components/AddNote";
 
 function App() {
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message) => {
+    setAlert({
+      msg: message,
+    });
+    setTimeout(() => {
+      setAlert(null);
+    },3000);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NoteState>
+      <Router>
+        <Navbar />
+        <Alert alert={alert} />
+
+        <Routes>
+          <Route exact path="/" element={<Home showAlert={showAlert} />} />
+          <Route
+            exact
+            path="/addnote"
+            element={<AddNote showAlert={showAlert} />}
+          />
+        </Routes>
+      </Router>
+    </NoteState>
   );
 }
 

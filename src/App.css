@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+  background-color: #000;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-brand{
+display: block;
+margin: auto;
+  color: #fff !important;
+}
+.notes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+}
+.notes-container,.addnote{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addnote{
+  flex-direction: column;
+}
+.slashPin{
+background-color: #000;
+color: #fff;
+border-radius: 6px;
+}
+i{
+  padding: 10px;
+}
+.card-buttons{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.App-link {
-  color: #61dafb;
+i:focus,i:active,input,input:focus,input:active,.page-link:active,.page-link:focus{
+  outline: none !important;
+  box-shadow: none !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Pagination styling */
+.pagination {
+  margin-top: 20px;
+}
+.pagination .page-item {
+  display: inline;
+  margin: 0 5px;
+}
+.pagination .page-link {
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+.pagination .page-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+.first-item {
+ order: -1;
+}
+.card-title{
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  padding: 15px;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+.searchContainer {
+  overflow: hidden;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.searchIcon {
+  padding: 0.7rem;
+}
+.searchBox {
+  width: 300px;
+  border: 0;
+  padding: 0.7rem 0.7rem 0.7rem 0;
+}
+.confirmation-modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9999;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 20vh;
+  background-color: #000;
+  color: #fff;
+  width: 30vw;
+  padding: 20px;
+}
+.alert{
+ display: block;
+ margin: 0 auto;
+  width: 50%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  position: relative;
+  z-index: 999;
+}
+.card{
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+@media only screen and (max-width:768px) {
+  html,body{
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
-  to {
-    transform: rotate(360deg);
+  .notes{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+@media only screen and (max-width:425px) {
+  .notes{
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .addnote input,.addnote textarea{
+    width: 320px !important;
   }
 }
