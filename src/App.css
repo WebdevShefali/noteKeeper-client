@@ -158,4 +158,8 @@ input:active,
   .addnote textarea {
     width: 320px !important;
   }
+.confirmation-modal {
+  height: 50vh;
+  width: 50vw;
+}
 }
