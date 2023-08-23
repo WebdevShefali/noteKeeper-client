@@ -162,4 +162,7 @@ input:active,
   height: 50vh;
   width: 50vw;
 }
+.search{
+flex-direction:column;
+}
 }
